@@ -68,13 +68,13 @@ Satu pengguna ("User") dapat membuat banyak acara ("Event"). Setiap acara dikait
   2. Aplikasi memberikan notifikasi kepada pengguna sesuai waktu yang telah diatur.
 
 ## Screenshoot Program
-![Tekan Tombol Mulai](screenshots/1.PNG)
-![Tambahkan Acara](screenshots/2.PNG)
-![Isi formulir sesuai kebutuhan](screenshots/3.PNG)
-![Masukkan waktu sesuai kebutuhan](screenshots/4.PNG)
-![Acara yang sudah dimasukkan akan ditampilkan disini, anda bisa juga menyunting/menghapus acara yang sudah anda buat](screenshots/5.PNG)
-![Aplikasi akan mengingatkan pengguna tentang acara yang di input](screenshots/6.PNG)
-![Tampilan disaat ingin menyunting suatu acara](screenshots/7.PNG)
+![Tekan Tombol Mulai](screenshots/1.png)
+![Tambahkan Acara](screenshots/2.png)
+![Isi formulir sesuai kebutuhan](screenshots/3.png)
+![Masukkan waktu sesuai kebutuhan](screenshots/4.png)
+![Acara yang sudah dimasukkan akan ditampilkan disini, anda bisa juga menyunting/menghapus acara yang sudah anda buat](screenshots/5.png)
+![Aplikasi akan mengingatkan pengguna tentang acara yang di input](screenshots/6.png)
+![Tampilan disaat ingin menyunting suatu acara](screenshots/7.png)
 
 
 ## Get Started
