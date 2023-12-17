@@ -15,7 +15,7 @@ Selamat datang di Aplikasi Penjadwal Sederhana, fungsi dari aplikasi ini Flutter
 1. Clone repository:
 
    ```bash
-   git clone https://github.com/SuamiSahShiroko/Simple-Flutter-Scheduler
+   git clone https://github.com/SuamiSahShiroko/simple-scheduler-ubsi
 
 2. Install Depedencies
   flutter pub get 
