@@ -4,12 +4,12 @@ import '../event.dart';
 
 class EventService {
   static const String _baseUrl =
-      'https://6577fa9e197926adf62f3010.mockapi.io/events';
+      'https://6577fa9e197926adf62f3010.mockapi.io/events'; // Updated mock API endpoint
   final Dio _dio = Dio();
 
   Future<List<Event>> getEvents() async {
     try {
-      final response = await _dio.get(_baseUrl);
+      final response = await _dio.get('$_baseUrl/events');
 
       if (response.statusCode == 200) {
         final List<dynamic> data = response.data;
@@ -27,8 +27,8 @@ class EventService {
       final eventsJson = events.map((event) => event.toJson()).toList();
 
       await _dio.post(
-        _baseUrl,
-        data: eventsJson,
+        '$_baseUrl/events',
+        data: {'events': eventsJson},
         options: Options(contentType: Headers.jsonContentType),
       );
     } catch (e) {

@@ -1,4 +1,3 @@
-//scheduler_app.dart
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'event.dart';
@@ -7,7 +6,7 @@ import 'event_details_screen.dart';
 import 'edit_event_screen.dart';
 import 'event_list.dart';
 import 'widget/alarm_logo.dart';
-import 'package:flutter_sound/flutter_sound.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 class SchedulerApp extends StatefulWidget {
   @override
@@ -16,12 +15,12 @@ class SchedulerApp extends StatefulWidget {
 
 class _SchedulerAppState extends State<SchedulerApp> {
   final List<Event> _events = [];
-  late FlutterSoundPlayer _audioPlayer;
+  late AssetsAudioPlayer _assetsAudioPlayer;
 
   @override
   void initState() {
     super.initState();
-    _audioPlayer = FlutterSoundPlayer();
+    _assetsAudioPlayer = AssetsAudioPlayer();
     _scheduleCheckEvents();
   }
 
@@ -68,15 +67,16 @@ class _SchedulerAppState extends State<SchedulerApp> {
     }
   }
 
-  void _playAudio() async {
-    await _audioPlayer.startPlayer(
-      fromURI: 'assets/123456.mp3',
-      codec: Codec.mp3,
+  void _playAudio() {
+    _assetsAudioPlayer.open(
+      Audio('assets/123456.mp3'),
+      autoStart: true,
+      showNotification: true,
     );
   }
 
   void _stopAudio() {
-    _audioPlayer.stopPlayer();
+    _assetsAudioPlayer.stop();
   }
 
   void addEvent(Event event) {
