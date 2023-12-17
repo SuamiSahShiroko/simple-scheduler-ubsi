@@ -68,13 +68,13 @@ Satu pengguna ("User") dapat membuat banyak acara ("Event"). Setiap acara dikait
   2. Aplikasi memberikan notifikasi kepada pengguna sesuai waktu yang telah diatur.
 
 ## Screenshoot Program
-![Screenshot 1](screenshots/1.png)
-![Screenshot 2](screenshots/2.png)
-![Screenshot 3](screenshots/3.png)
-![Screenshot 4](screenshots/4.png)
-![Screenshot 5](screenshots/5.png)
-![Screenshot 6](screenshots/6.png)
-![Screenshot 7](screenshots/7.png)
+![Screenshot 1](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/1.PNG)
+![Screenshot 2](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/2.PNG)
+![Screenshot 3](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/3.PNG)
+![Screenshot 4](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/4.PNG)
+![Screenshot 5](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/5.PNG)
+![Screenshot 6](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/6.PNG)
+![Screenshot 7](https://github.com/SuamiSahShiroko/simple-scheduler-ubsi/blob/test/screenshoots/7.PNG)
 
 ## Get Started
 
