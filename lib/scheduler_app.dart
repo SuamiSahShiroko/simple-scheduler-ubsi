@@ -26,17 +26,20 @@ class _SchedulerAppState extends State<SchedulerApp> {
   }
 
   void _scheduleCheckEvents() {
-    Future.delayed(Duration(seconds: 30), () {
+    // Schedule the check every 30 seconds
+    Timer.periodic(Duration(seconds: 30), (timer) {
       _checkEvents();
-      _scheduleCheckEvents(); // Reschedule the check after 30 seconds
     });
   }
 
   void _checkEvents() {
     DateTime now = DateTime.now();
     for (Event event in _events) {
-      if (now.isAfter(event.startTime) && now.isBefore(event.endTime)) {
-        _playAudio(); // Play audio when the event starts
+      // Compare dates only without considering the time
+      if (now.year == event.startTime.year &&
+          now.month == event.startTime.month &&
+          now.day == event.startTime.day) {
+        _playAudio(); // Play audio when the event's date has arrived
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
