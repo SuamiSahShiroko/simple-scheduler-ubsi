@@ -31,38 +31,37 @@ class _SchedulerAppState extends State<SchedulerApp> {
   }
 
   void _checkEvents() {
-  DateTime now = DateTime.now();
-  for (Event event in _events) {
-    if (now.isAfter(event.startTime) && now.isBefore(event.endTime)) {
-      _playAudio(); // Play audio when the event's date has arrived
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Column(
-            children: [
-              AlarmLogo(),
-              SizedBox(height: 8.0),
-              Text('PERINGATAN!'),
+    DateTime now = DateTime.now();
+    for (Event event in _events) {
+      if (now.isAfter(event.startTime) && now.isBefore(event.endTime)) {
+        _playAudio(); // Play audio when the event's date has arrived
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Column(
+              children: [
+                AlarmLogo(),
+                SizedBox(height: 8.0),
+                Text('PERINGATAN!'),
+              ],
+            ),
+            content: Text('acara ${event.title} sedang berjalan.'),
+            actions: [
+              Center(
+                child: TextButton(
+                  onPressed: () {
+                    _stopAudio(); // Stop audio when the user presses "OK"
+                    Navigator.pop(context);
+                  },
+                  child: Text('OK'),
+                ),
+              ),
             ],
           ),
-          content: Text('acara ${event.title} sedang berjalan.'),
-          actions: [
-            Center(
-              child: TextButton(
-                onPressed: () {
-                  _stopAudio(); // Stop audio when the user presses "OK"
-                  Navigator.pop(context);
-                },
-                child: Text('OK'),
-              ),
-            ),
-          ],
-        ),
-      );
+        );
+      }
     }
   }
-}
-
 
   void _playAudio() {
     _assetsAudioPlayer.open(
@@ -158,17 +157,17 @@ class _SchedulerAppState extends State<SchedulerApp> {
             Text('Tambahkan Acara'),
           ],
         ),
-        content: Center(
-          child: AddEventForm(onSubmit: (event) => addEvent(event)),
-        ),
-        actions: [
-          Center(
-            child: TextButton(
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            AddEventForm(onSubmit: (event) => addEvent(event)),
+            SizedBox(height: 8.0), // Add some space between form and button
+            ElevatedButton(
               onPressed: () => Navigator.pop(context),
               child: Text('Batal'),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
