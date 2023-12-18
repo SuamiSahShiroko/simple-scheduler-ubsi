@@ -161,7 +161,7 @@ class _SchedulerAppState extends State<SchedulerApp> {
           mainAxisSize: MainAxisSize.min,
           children: [
             AddEventForm(onSubmit: (event) => addEvent(event)),
-            SizedBox(height: 8.0), // Add some space between form and button
+            SizedBox(height: 8.0),
             ElevatedButton(
               onPressed: () => Navigator.pop(context),
               child: Text('Batal'),
