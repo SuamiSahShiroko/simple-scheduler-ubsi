@@ -25,47 +25,44 @@ class _SchedulerAppState extends State<SchedulerApp> {
   }
 
   void _scheduleCheckEvents() {
-    // Schedule the check every 30 seconds
     Timer.periodic(Duration(seconds: 30), (timer) {
       _checkEvents();
     });
   }
 
   void _checkEvents() {
-    DateTime now = DateTime.now();
-    for (Event event in _events) {
-      // Compare dates only without considering the time
-      if (now.year == event.startTime.year &&
-          now.month == event.startTime.month &&
-          now.day == event.startTime.day) {
-        _playAudio(); // Play audio when the event's date has arrived
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: Column(
-              children: [
-                AlarmLogo(),
-                SizedBox(height: 8.0),
-                Text('PERINGATAN!'),
-              ],
-            ),
-            content: Text('acara ${event.title} sedang berjalan.'),
-            actions: [
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    _stopAudio(); // Stop audio when the user presses "OK"
-                    Navigator.pop(context);
-                  },
-                  child: Text('OK'),
-                ),
-              ),
+  DateTime now = DateTime.now();
+  for (Event event in _events) {
+    if (now.isAfter(event.startTime) && now.isBefore(event.endTime)) {
+      _playAudio(); // Play audio when the event's date has arrived
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Column(
+            children: [
+              AlarmLogo(),
+              SizedBox(height: 8.0),
+              Text('PERINGATAN!'),
             ],
           ),
-        );
-      }
+          content: Text('acara ${event.title} sedang berjalan.'),
+          actions: [
+            Center(
+              child: TextButton(
+                onPressed: () {
+                  _stopAudio(); // Stop audio when the user presses "OK"
+                  Navigator.pop(context);
+                },
+                child: Text('OK'),
+              ),
+            ),
+          ],
+        ),
+      );
     }
   }
+}
+
 
   void _playAudio() {
     _assetsAudioPlayer.open(
