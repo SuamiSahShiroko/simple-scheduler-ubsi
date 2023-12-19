@@ -26,7 +26,6 @@ class _AddEventFormState extends State<AddEventForm> {
   @override
   void initState() {
     super.initState();
-    // If the widget is used for editing, set initial values
     if (widget.editEvent != null) {
       _titleController.text = widget.editEvent!.title;
       _descriptionController.text = widget.editEvent!.description;
