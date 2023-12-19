@@ -45,10 +45,10 @@ class _AddEventFormState extends State<AddEventForm> {
 
     if (widget.onEdit != null && widget.editEvent != null) {
       widget.onEdit!(widget.editEvent!, event);
-      _showSnackbar('Event edited successfully!');
+      _showSnackbar('Acara Berhasil Diubah!');
     } else {
       widget.onSubmit(event);
-      _showSnackbar('Event added successfully!');
+      _showSnackbar('Acara Berhasil Ditambahkan!');
     }
 
     Navigator.pop(context);
