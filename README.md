@@ -28,14 +28,13 @@ Satu pengguna ("User") dapat membuat banyak acara ("Event"). Setiap acara dikait
   1. Pengguna masuk ke dalam aplikasi.
   2. Pengguna memilih opsi "Tambahkan Acara" atau "Buat Acara Baru."
   3. Pengguna mengisi formulir dengan detail acara (judul, deskripsi, waktu mulai, waktu selesai).
-  4. Pengguna menekan tombol "Tambahkan" atau "Simpan."
+  4. Pengguna menekan tombol "Tambahkan"
 
 #### 2. Melihat Daftar Acara:
 - **Deskripsi:** Pengguna ingin melihat daftar acara yang telah mereka buat.
 - **Langkah-langkah:**
   1. Pengguna masuk ke dalam aplikasi.
-  2. Pengguna memilih opsi "Daftar Acara" atau "Lihat Acara."
-  3. Aplikasi menampilkan daftar acara yang dimiliki pengguna.
+  2. Daftar Acara sudah di tampilkan pada halaman utama
 
 #### 3. Mengedit Acara:
 - **Deskripsi:** Pengguna ingin mengedit acara yang sudah ada.
@@ -43,7 +42,7 @@ Satu pengguna ("User") dapat membuat banyak acara ("Event"). Setiap acara dikait
   1. Pengguna masuk ke dalam aplikasi.
   2. Pengguna memilih acara yang ingin diedit dari daftar acara.
   3. Pengguna memilih opsi "Edit Acara."
-  4. Pengguna melakukan perubahan pada informasi acara (judul, deskripsi, waktu mulai, waktu selesai).
+  4. Pengguna melakukan perubahan pada informasi acara (judul, deskripsi, waktu mulai).
   5. Pengguna menekan tombol "Simpan" untuk menyimpan perubahan.
 
 #### 4. Melihat Detail Acara:
@@ -59,9 +58,8 @@ Satu pengguna ("User") dapat membuat banyak acara ("Event"). Setiap acara dikait
   1. Pengguna masuk ke dalam aplikasi.
   2. Pengguna memilih acara yang ingin dihapus dari daftar acara.
   3. Pengguna memilih opsi "Hapus Acara."
-  4. Aplikasi meminta konfirmasi pengguna sebelum menghapus acara.
 
-#### 6. Menerima Notifikasi:
+#### 6. Menerima Notifikasi Pengingat:
 - **Deskripsi:** Pengguna ingin menerima notifikasi tentang acara yang akan datang.
 - **Langkah-langkah:**
   1. Pengguna membuat atau mengedit acara dan mengatur pengingat.
