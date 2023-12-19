@@ -21,7 +21,6 @@ class Event {
     );
   }
 
-  // Add this method to convert an Event object to a Map
   Map<String, dynamic> toJson() {
     return {
       'title': title,
