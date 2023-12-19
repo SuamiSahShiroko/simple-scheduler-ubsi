@@ -12,7 +12,6 @@ class Event {
     required this.endTime,
   });
 
-  // Add this factory method to create an Event object from a Map
   factory Event.fromJson(Map<String, dynamic> json) {
     return Event(
       title: json['title'],
